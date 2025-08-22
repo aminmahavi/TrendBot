@@ -1,23 +1,26 @@
-# پوشه محیط مجازی
+# محیط مجازی
 venv/
 
-# پوشه خروجی ویدئوها
+# پوشه دانلودها
 downloads/
 
-# فایل کلیدها و اطلاعات حساس
-*.env
-API_KEY.txt
+# فایل‌های حساس و کلیدها
+.env
+config.json
+*.key
+*.pem
+*.crt
 
-# فایل‌های کش و خروجی پایتون
+# کش و فایل‌های موقت پایتون
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 
-# فایل‌های موقت VSCode
+# فایل‌های IDE مثل VSCode و PyCharm
 .vscode/
+.idea/
 
-# سایر فایل‌های موقتی سیستم
+# فایل‌های سیستمی
 .DS_Store
 Thumbs.db
-API_KEY: AIzaSyDhxsHocknUtE8pf8-akAnfQw8JmNakOu0
