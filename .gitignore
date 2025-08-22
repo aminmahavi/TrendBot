@@ -1,0 +1,23 @@
+# پوشه محیط مجازی
+venv/
+
+# پوشه خروجی ویدئوها
+downloads/
+
+# فایل کلیدها و اطلاعات حساس
+*.env
+API_KEY.txt
+
+# فایل‌های کش و خروجی پایتون
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# فایل‌های موقت VSCode
+.vscode/
+
+# سایر فایل‌های موقتی سیستم
+.DS_Store
+Thumbs.db
+API_KEY: AIzaSyDhxsHocknUtE8pf8-akAnfQw8JmNakOu0
