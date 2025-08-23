@@ -24,3 +24,5 @@ __pycache__/
 # فایل‌های سیستمی
 .DS_Store
 Thumbs.db
+
+apikey.env

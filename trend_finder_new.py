@@ -1,13 +1,20 @@
+import os
 from googleapiclient.discovery import build
 from deep_translator import GoogleTranslator
 from pytube import YouTube
+from dotenv import load_dotenv
 
-# کلید جدید یوتیوب
-YOUTUBE_API_KEY = "AIzaSyACVQ_Pgfzd6EBI8n1gr6OfuwC8ROwq6CI"
+# لود کردن کلید از فایل apikey.env
+load_dotenv("apikey.env")
+YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
+
 YOUTUBE_API_SERVICE = "youtube"
 YOUTUBE_API_VERSION = "v3"
 
 def get_trending_videos(region_code="US", max_results=5):
+    if not YOUTUBE_API_KEY:
+        raise ValueError("❌ API Key not found! Please set it in apikey.env as YOUTUBE_API_KEY=your_key_here")
+
     youtube = build(YOUTUBE_API_SERVICE, YOUTUBE_API_VERSION, developerKey=YOUTUBE_API_KEY)
 
     request = youtube.videos().list(
